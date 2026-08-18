@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Portal</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <h2>Custom Web Portal</h2>
+    <input type="text" id="url" placeholder="https://example.com" style="width: 300px; padding: 8px;">
+    <button onclick="go()" style="padding: 8px 15px;">Go</button>
+    <script>
+        function go() {
+            let target = document.getElementById('url').value;
+            if(!target.startsWith('http')) target = 'https://' + target;
+            window.location.href = 'https://translate.google.com/translate?sl=auto&tl=en&u=' + encodeURIComponent(target);
+        }
+    </script>
+</body>
+</html>
