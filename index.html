@@ -11,7 +11,8 @@
         function go() {
             let target = document.getElementById('url').value;
             if(!target.startsWith('http')) target = 'https://' + target;
-            window.location.href = 'https://translate.google.com/translate?sl=auto&tl=en&u=' + encodeURIComponent(target);
+            // Using a clean iframe embed fallback instead of Google Translate
+            window.location.href = 'https://html5.gamedistribution.com/' + target; 
         }
     </script>
 </body>
